@@ -46,6 +46,7 @@ The designs were created to the following widths:
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     color: hsl(236, 100%, 87%);
+    margin: 0;
 }
 
 body {
@@ -75,7 +76,7 @@ ul, ol {
     gap: 30px;
 }
 
-#profile, li div {
+#profile, li div, #cardList > li {
     background-color: hsl(235, 46%, 20%);
     border-radius: 15px;
 }
@@ -97,7 +98,7 @@ ul, ol {
     font-weight: 400;
 }
 
-#profile > div h1 {
+h1 {
     margin: 0px;
     font-size: 1.5rem;
 }
@@ -108,7 +109,7 @@ ul, ol {
     width: 4rem;
 }
 
-#profile > ol {
+#tabs {
     margin: 20px;
 
     display: flex;
@@ -116,9 +117,123 @@ ul, ol {
     justify-content: space-around;
 }
 
-#profile > ol a {
+#tabs a {
     color: hsl(235, 45%, 61%);
     font-weight: 400;
+}
+
+#cardList {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+#cardList > li {
+    padding-top: 35px;
+}
+
+#cardList > li:nth-child(1) {
+    background: hsl(15, 100%, 70%) url(./images/icon-work.svg) no-repeat right 20px top -8px;
+}
+#cardList > li:nth-child(2) {
+    background: hsl(195, 74%, 62%) url(./images/icon-play.svg) no-repeat right 20px top -8px;
+}
+#cardList > li:nth-child(3) {
+    background: hsl(348, 100%, 68%) url(./images/icon-study.svg) no-repeat right 20px top -8px;
+}
+#cardList > li:nth-child(4) {
+    background: hsl(145, 58%, 55%) url(./images/icon-exercise.svg) no-repeat right 20px top -8px;
+}
+#cardList > li:nth-child(5) {
+    background: hsl(264, 64%, 52%) url(./images/icon-social.svg) no-repeat right 20px top -8px;
+}
+#cardList > li:nth-child(6) {
+    background: hsl(43, 84%, 65%) url(./images/icon-self-care.svg) no-repeat right 20px top -8px;
+}
+
+#cardList > li > div {
+    padding: 30px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linebreaker {
+    flex: 1 1 100%;
+    margin: 3px 0px;
+}
+
+#cardList h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+}
+
+.currentTime {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: white;
+}
+
+.prevTime {
+    font-size: 0.9375rem;
+}
+
+@media only screen and (min-width: 890px) {
+    #showcase {
+        height: 100vh;
+        align-items: center;
+    }
+
+    #showcase > article {
+        width: 80%;
+        flex-direction: row;
+    }
+
+    #profile {
+        flex: 1 1 25%;
+    }
+
+    #profile > div {
+        padding: 30px;
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    #profile > div > img {
+        width: 5rem;
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+
+    #tabs {
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 20px;
+        margin-left: 30px;
+    }
+
+    #cardList {
+        flex-flow: row wrap;
+        flex: 1 1 75%;
+    }
+    #cardList > li {
+        flex: 1 1 30%;
+    }
+    .linebreaker {
+        margin: 10px 0px;
+    }
+    .currentTime {
+        font-size: 4rem;
+    }
 }
 
 .attribution { font-size: 11px; text-align: center; }
