@@ -246,6 +246,7 @@ h1 {
     }
     .currentTime {
         font-size: 3rem;
+        flex: 1 1 100%;
     }
 }
 
