@@ -24,11 +24,24 @@ function changeTimeframe(timeframe) {
     fetchedData.forEach(element => {
         let timeSelector = `#${element.title.toLowerCase().replace(' ', '')} .currentTime`;
         let time = element.timeframes[timeframe].current;
+        let preText;
 
         if(time == 1) time = time + 'hr';
         else time = time + 'hrs';
 
         document.querySelector(timeSelector).innerHTML = time;
+
+        timeSelector = `#${element.title.toLowerCase().replace(' ', '')} .prevTime`;
+        time = element.timeframes[timeframe].previous;
+
+        if(time == 1) time = time + 'hr';
+        else time = time + 'hrs';
+
+        if(timeframe === 'daily') preText = 'Yesterday - ';
+        else if (timeframe === 'weekly') preText = 'Last-week - ';
+        else preText = 'Last-month - ';
+
+        document.querySelector(timeSelector).innerHTML = preText + time;
     });
     clearButtons(timeframe);
 }; 
