@@ -10,9 +10,9 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
 </head>
 <body>
-
   <main id="showcase">
     <article>
       <div id="profile">
@@ -24,23 +24,23 @@
           </div>
         </div>
         <ol id="tabs">
-          <li><a href="#">Daily</a></li>
-          <li><a href="#">Weekly</a></li>
-          <li><a href="#">Monthly</a></li>
+          <li><a id="daily" class="button" onclick="changeTimeframe('daily')" href="#">Daily</a></li>
+          <li><a id="weekly" class="button" onclick="changeTimeframe('weekly')" href="#">Weekly</a></li>
+          <li><a id="monthly" class="button" onclick="changeTimeframe('monthly')" href="#">Monthly</a></li>
         </ol>
       </div>
       <ul id="cardList">
         <li>
-          <div>
+          <div id="work">
             <h2>Work</h2>
             <object rel="image/xml+svg" data="./images/icon-ellipsis.svg"></object>
             <div class="linebreaker"></div>
-            <span class="currentTime">13hrs</span>
+            <span class="currentTime">103hrs</span>
             <span class="prevTime">Last-week - 2hrs</span>
           </div>
         </li>
         <li>
-          <div>
+          <div id="play">
             <h2>Play</h2>
             <object rel="image/xml+svg" data="./images/icon-ellipsis.svg"></object>
             <div class="linebreaker"></div>
@@ -49,7 +49,7 @@
           </div>
         </li>
         <li>
-          <div>
+          <div id="study">
             <h2>Study</h2>
             <object rel="image/xml+svg" data="./images/icon-ellipsis.svg"></object>
             <div class="linebreaker"></div>
@@ -58,7 +58,7 @@
           </div>
         </li>
         <li>
-          <div>
+          <div id="exercise">
             <h2>Exercise</h2>
             <object rel="image/xml+svg" data="./images/icon-ellipsis.svg"></object>
             <div class="linebreaker"></div>
@@ -67,7 +67,7 @@
           </div>
         </li>
         <li>
-          <div>
+          <div id="social">
             <h2>Social</h2>
             <object rel="image/xml+svg" data="./images/icon-ellipsis.svg"></object>
             <div class="linebreaker"></div>
@@ -76,7 +76,7 @@
           </div>
         </li>
         <li>
-          <div>
+          <div id="selfcare">
             <h2>Self Care</h2>
             <object rel="image/xml+svg" data="./images/icon-ellipsis.svg"></object>
             <div class="linebreaker"></div>

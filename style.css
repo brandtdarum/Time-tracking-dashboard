@@ -53,10 +53,6 @@ body {
     background-color: hsl(226, 43%, 10%);
 }
 
-a {
-    text-decoration: none;
-}
-
 ul, ol {
     padding: 0;
     list-style-type: none;
@@ -94,11 +90,12 @@ ul, ol {
 }
 
 #profile > div span {
-    font-size: 0.8rem;
+    font-size: 0.9375rem;
     font-weight: 400;
 }
 
 h1 {
+    color: white;
     margin: 0px;
     font-size: 1.5rem;
 }
@@ -120,6 +117,12 @@ h1 {
 #tabs a {
     color: hsl(235, 45%, 61%);
     font-weight: 400;
+    text-decoration: none;
+}
+
+/* Find a way to natively not have to put !important */
+#tabs a:hover {
+    color: white !important;
 }
 
 #cardList {
@@ -159,6 +162,16 @@ h1 {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    transition: 0.2s ease;
+}
+
+#cardList > li> div:hover {
+    background-color: hsl(235, 45%, 61%);
+    transition: 0.2s ease;
+}
+
+#cardList > li object:hover {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(118%) contrast(100%);
 }
 
 .linebreaker {
@@ -211,7 +224,7 @@ h1 {
     }
     
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     #tabs {
@@ -232,7 +245,7 @@ h1 {
         margin: 10px 0px;
     }
     .currentTime {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
 
